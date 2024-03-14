@@ -1,0 +1,2688 @@
+{
+  "last_node_id": 122,
+  "last_link_id": 288,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "VAELoader",
+      "pos": [
+        357,
+        511
+      ],
+      "size": {
+        "0": 385.8948669433594,
+        "1": 58
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            10,
+            60
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "vaeFtMse840000Ema_v100.pt"
+      ]
+    },
+    {
+      "id": 58,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        2578,
+        304
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 2,
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            90
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "2xLexicaRRDBNet_Sharp.pth"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "CLIPTextEncode",
+      "pos": [
+        831,
+        106
+      ],
+      "size": {
+        "0": 377.7811279296875,
+        "1": 124.52955627441406
+      },
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 233
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "viscous honey, bees, honeycomb\n"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 5,
+      "type": "PrimitiveNode",
+      "pos": [
+        875,
+        534
+      ],
+      "size": {
+        "0": 285.6000061035156,
+        "1": 82
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            101,
+            108
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "seed"
+          }
+        }
+      ],
+      "title": "Primitive (I'm using this as seed)",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        44444444,
+        "fixed"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 4,
+      "type": "CLIPSetLastLayer",
+      "pos": [
+        3.7028909093681657,
+        392.70318747780533
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 222
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            232,
+            233,
+            234
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPSetLastLayer"
+      },
+      "widgets_values": [
+        -2
+      ]
+    },
+    {
+      "id": 79,
+      "type": "Note",
+      "pos": [
+        615,
+        649
+      ],
+      "size": {
+        "0": 236.05117797851562,
+        "1": 268.8227233886719
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "title": "Positive_Text",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "mushrooms, fungi, molds growing\n\ncrystals, rocks, gems\n\nrobot engines, android part, white (flowers:1.4)\n\nbones, fur, feathers\n\npizza, stringy cheese, salami\n\nviscous honey, bees, honeycomb\n\nwaves, long green algae, eels\n\nstones, water, denim fabric stipes\n\nnsfw, nude, texts, hands, humans, girl, boy, letters, words, (worst quality, low quality:1.4)"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 92,
+      "type": "Note",
+      "pos": [
+        1115,
+        -781
+      ],
+      "size": {
+        "0": 229.25827026367188,
+        "1": 162.6419219970703
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "title": "ControlNET_Values",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "STRONG:\n0.55\n0\n0.65\n\nSOFT:\n0.45\n0\n0.5\n"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 72,
+      "type": "Note",
+      "pos": [
+        1563,
+        -779
+      ],
+      "size": {
+        "0": 271.8442077636719,
+        "1": 258.18695068359375
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "title": "KSampler_Values",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "LCM:\nsteps 8\nCFG: 1.5\nS_Name: lcm\nsched: sgm_uniform\n\nFULL:\nsteps:30\nCFG: 8.5\nS_Name:dpmpp_sde\nsched: sgm_uniform\n\nTEST:\nsteps:15\nCFG: 4.2\nS_Name: euler_ancestral\nsched: sgm_uniform"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 91,
+      "type": "Note",
+      "pos": [
+        1230,
+        719
+      ],
+      "size": {
+        "0": 423.9530334472656,
+        "1": 259.99957275390625
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "title": "Multi_Prompts",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "\"0\" : \"(Spring:1.5), flowers, smile\",\n\"20\" : \"(Spring:1.5), flowers, smile\",\n\"30\" : \"(Summer:1.5), sun, happy, windy\",\n\"50\" : \"(Summer:1.5), sun, happy, windy\",\n\"60\" : \"(Autumn:1.5), yellow leaves, laugh\",\n\"80\" : \"(Spring:1.5), yellow leaves, laugh\",\n\"90\" : \"(Winter:1.5), wind, snow, smile, seductive\",\n\"100\" : \"(Winter:1.5), wind snow, smile, seductive\"\n\n\n\"0\" : \"mushrooms, fungi, molds growing\",\n\"20\" : \"mushrooms, fungi, molds growing\",\n\"30\" : \"viscous honey, bees, honeycomb\",\n\"50\" : \"viscous honey, bees, honeycomb\",\n\"60\" : \"corals, crabs, tentacles\",\n\"80\" : \"corals, crabs, tentacles\",\n\"90\" : \"gold, gems, rocks\",\n\"100\" : \"gold, gems, rocks\""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        702,
+        263
+      ],
+      "size": {
+        "0": 391.23883056640625,
+        "1": 78.14339447021484
+      },
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 232,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            154
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "nsfw, nude, texts, human, woman, boy, man, girl, letters, words, (worst quality, low quality:1.4)"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 9,
+      "type": "EmptyLatentImage",
+      "pos": [
+        954,
+        -144
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "batch_size",
+          "type": "INT",
+          "link": 71,
+          "widget": {
+            "name": "batch_size"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            107
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        512,
+        512,
+        16
+      ]
+    },
+    {
+      "id": 24,
+      "type": "ControlNetApplyAdvanced",
+      "pos": [
+        1069,
+        -563
+      ],
+      "size": {
+        "0": 315,
+        "1": 166
+      },
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 206
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 154
+        },
+        {
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 28
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 255
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            258
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            259
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetApplyAdvanced"
+      },
+      "widgets_values": [
+        0.55,
+        0,
+        0.65
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 81,
+      "type": "PreviewImage",
+      "pos": [
+        2914,
+        -799
+      ],
+      "size": {
+        "0": 336.181640625,
+        "1": 359.8456115722656
+      },
+      "flags": {},
+      "order": 46,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 194
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 104,
+      "type": "ImageScale",
+      "pos": [
+        520,
+        -974
+      ],
+      "size": {
+        "0": 315,
+        "1": 130
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 261
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            262,
+            265
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScale"
+      },
+      "widgets_values": [
+        "nearest-exact",
+        512,
+        512,
+        "disabled"
+      ]
+    },
+    {
+      "id": 101,
+      "type": "ControlNetLoaderAdvanced",
+      "pos": [
+        1330,
+        -1020
+      ],
+      "size": {
+        "0": 367.79998779296875,
+        "1": 58
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "timestep_keyframe",
+          "type": "TIMESTEP_KEYFRAME",
+          "link": 284
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            257
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetLoaderAdvanced"
+      },
+      "widgets_values": [
+        "control_v11p_sd15s2_lineart_anime.pth"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 105,
+      "type": "AnimeLineArtPreprocessor",
+      "pos": [
+        930,
+        -1065
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 265
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            266,
+            267
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AnimeLineArtPreprocessor"
+      },
+      "widgets_values": [
+        512
+      ]
+    },
+    {
+      "id": 84,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        2049,
+        -260
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            196
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4x-UltraSharp.pth"
+      ]
+    },
+    {
+      "id": 20,
+      "type": "ControlNetLoaderAdvanced",
+      "pos": [
+        602,
+        -501
+      ],
+      "size": {
+        "0": 367.79998779296875,
+        "1": 58
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "timestep_keyframe",
+          "type": "TIMESTEP_KEYFRAME",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            28
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetLoaderAdvanced"
+      },
+      "widgets_values": [
+        "controlnetQRPatternQR_v2Sd15.safetensors"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 89,
+      "type": "CheckpointLoaderSimpleWithNoiseSelect",
+      "pos": [
+        -684,
+        260
+      ],
+      "size": {
+        "0": 319.20001220703125,
+        "1": 170
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimpleWithNoiseSelect"
+      },
+      "widgets_values": [
+        "dreamshaper_8.safetensors",
+        "sqrt_linear (AnimateDiff)",
+        false,
+        0.18215
+      ]
+    },
+    {
+      "id": 64,
+      "type": "ImageScale",
+      "pos": [
+        571,
+        -375
+      ],
+      "size": {
+        "0": 315,
+        "1": 130
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 120
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            255
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScale"
+      },
+      "widgets_values": [
+        "nearest-exact",
+        512,
+        512,
+        "disabled"
+      ]
+    },
+    {
+      "id": 102,
+      "type": "ControlNetApplyAdvanced",
+      "pos": [
+        1779,
+        -994
+      ],
+      "size": {
+        "0": 315,
+        "1": 166
+      },
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 258
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 259
+        },
+        {
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 257
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 267
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            263,
+            276
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            264,
+            277
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetApplyAdvanced"
+      },
+      "widgets_values": [
+        0.45,
+        0,
+        0.5
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 83,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        2346,
+        -374
+      ],
+      "size": {
+        "0": 241.79998779296875,
+        "1": 46
+      },
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 196
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 288,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            269
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageUpscaleWithModel"
+      }
+    },
+    {
+      "id": 39,
+      "type": "PreviewImage",
+      "pos": [
+        363,
+        -676
+      ],
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 69
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 103,
+      "type": "VHS_LoadImages",
+      "pos": [
+        125,
+        -995
+      ],
+      "size": [
+        315,
+        194
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            261
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadImages"
+      },
+      "widgets_values": {
+        "directory": "STONES_PITTI_TEXTURED_V6",
+        "image_load_cap": 200,
+        "skip_first_images": 1,
+        "select_every_nth": 1,
+        "choose folder to upload": 1,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "frame_load_cap": 200,
+            "skip_first_images": 1,
+            "filename": "STONES_PITTI_TEXTURED_V6",
+            "type": "input",
+            "format": "folder",
+            "select_every_nth": 1
+          }
+        }
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 40,
+      "type": "LatentUpscaleBy",
+      "pos": [
+        1919,
+        -85
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 38,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 245,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            279
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LatentUpscaleBy"
+      },
+      "widgets_values": [
+        "bilinear",
+        2
+      ]
+    },
+    {
+      "id": 50,
+      "type": "VHS_LoadImages",
+      "pos": [
+        109,
+        -318
+      ],
+      "size": [
+        315,
+        194
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            69,
+            120
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            71,
+            235
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadImages"
+      },
+      "widgets_values": {
+        "directory": "STONES_PITTI_V5",
+        "image_load_cap": 200,
+        "skip_first_images": 1,
+        "select_every_nth": 1,
+        "choose folder to upload": 1,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "frame_load_cap": 200,
+            "skip_first_images": 1,
+            "filename": "STONES_PITTI_V5",
+            "type": "input",
+            "format": "folder",
+            "select_every_nth": 1
+          }
+        }
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 80,
+      "type": "PreviewImage",
+      "pos": [
+        2354,
+        -885
+      ],
+      "size": {
+        "0": 320.701171875,
+        "1": 369.48065185546875
+      },
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 192
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 96,
+      "type": "PreviewImage",
+      "pos": [
+        1296,
+        -1357
+      ],
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 266
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 33,
+      "type": "ADE_AnimateDiffLoaderWithContext",
+      "pos": [
+        485,
+        -84
+      ],
+      "size": {
+        "0": 315,
+        "1": 230
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 283
+        },
+        {
+          "name": "context_options",
+          "type": "CONTEXT_OPTIONS",
+          "link": 93
+        },
+        {
+          "name": "motion_lora",
+          "type": "MOTION_LORA",
+          "link": null
+        },
+        {
+          "name": "motion_model_settings",
+          "type": "MOTION_MODEL_SETTINGS",
+          "link": null
+        },
+        {
+          "name": "sample_settings",
+          "type": "SAMPLE_SETTINGS",
+          "link": 281
+        },
+        {
+          "name": "ad_keyframes",
+          "type": "AD_KEYFRAMES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            104,
+            280
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ADE_AnimateDiffLoaderWithContext"
+      },
+      "widgets_values": [
+        "v3_sd15_mm.ckpt",
+        "sqrt_linear (AnimateDiff)",
+        1,
+        false
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 53,
+      "type": "LoraLoader",
+      "pos": [
+        -349,
+        -377
+      ],
+      "size": [
+        315,
+        338
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 231
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 229,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            155
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "LCM_LoRA_Weights_SD15.safetensors",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 67,
+      "type": "ModelSamplingDiscrete",
+      "pos": [
+        -317,
+        -159
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 155
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingDiscrete"
+      },
+      "widgets_values": [
+        "lcm",
+        false
+      ]
+    },
+    {
+      "id": 30,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -697,
+        112
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            231,
+            282
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            222,
+            229
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "dreamshaper_8.safetensors"
+      ]
+    },
+    {
+      "id": 118,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        -94,
+        -39
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 282
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            283
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "MotionLoRA\\v3_sd15_adapter.ckpt",
+        1
+      ]
+    },
+    {
+      "id": 97,
+      "type": "HEDPreprocessor",
+      "pos": [
+        932,
+        -939
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 262
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "HEDPreprocessor"
+      },
+      "widgets_values": [
+        "enable",
+        512
+      ]
+    },
+    {
+      "id": 61,
+      "type": "KSampler",
+      "pos": [
+        2136,
+        84
+      ],
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "flags": {},
+      "order": 42,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 280
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 276,
+          "slot_index": 1
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 277
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 279
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 101,
+          "widget": {
+            "name": "seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            278
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        44444444,
+        "randomize",
+        15,
+        5,
+        "dpmpp_2m",
+        "ddim_uniform",
+        0.51
+      ]
+    },
+    {
+      "id": 120,
+      "type": "ScaledSoftControlNetWeights",
+      "pos": [
+        980,
+        -913
+      ],
+      "size": {
+        "0": 315,
+        "1": 102
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CN_WEIGHTS",
+          "type": "CONTROL_NET_WEIGHTS",
+          "links": null,
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "TK_SHORTCUT",
+          "type": "TIMESTEP_KEYFRAME",
+          "links": [
+            284
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ScaledSoftControlNetWeights"
+      },
+      "widgets_values": [
+        0.825,
+        false
+      ]
+    },
+    {
+      "id": 42,
+      "type": "VAEDecode",
+      "pos": [
+        2564,
+        155
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 44,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 278
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 60
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            194,
+            195,
+            285
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 56,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        2928,
+        227
+      ],
+      "size": {
+        "0": 241.79998779296875,
+        "1": 46
+      },
+      "flags": {},
+      "order": 47,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 90
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 195,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageUpscaleWithModel"
+      }
+    },
+    {
+      "id": 69,
+      "type": "GMFSS Fortuna VFI",
+      "pos": [
+        2695,
+        -367
+      ],
+      "size": {
+        "0": 443.4000244140625,
+        "1": 150
+      },
+      "flags": {},
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "frames",
+          "type": "IMAGE",
+          "link": 269,
+          "slot_index": 0
+        },
+        {
+          "name": "optional_interpolation_states",
+          "type": "INTERPOLATION_STATES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            162
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GMFSS Fortuna VFI"
+      },
+      "widgets_values": [
+        "GMFSS_fortuna_union",
+        10,
+        2,
+        true
+      ]
+    },
+    {
+      "id": 62,
+      "type": "KSampler",
+      "pos": [
+        1510,
+        -419
+      ],
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 104
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 263
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 264,
+          "slot_index": 2
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 107
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 108,
+          "widget": {
+            "name": "seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            109,
+            245
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        44444444,
+        "randomize",
+        30,
+        8.5,
+        "dpmpp_sde",
+        "sgm_uniform",
+        1
+      ]
+    },
+    {
+      "id": 75,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        4141,
+        -497
+      ],
+      "size": [
+        315,
+        559
+      ],
+      "flags": {},
+      "order": 49,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 179,
+          "slot_index": 0
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "2048_2P_LUP_IUP_FORTUNA",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 20,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00129.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4"
+          }
+        }
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 122,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        3736,
+        -516
+      ],
+      "size": [
+        315,
+        559
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": null,
+          "slot_index": 0
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "2048_1P_IUP_SHARP_FORTUNA",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 20,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "2048_1P_IUP_FORTUNA_00079.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4"
+          }
+        }
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 10,
+      "type": "VAEDecode",
+      "pos": [
+        2076,
+        -468
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 109
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            192,
+            286,
+            288
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 121,
+      "type": "ImageCASharpening+",
+      "pos": [
+        2264,
+        -124
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 40,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 286
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageCASharpening+"
+      },
+      "widgets_values": [
+        0.8
+      ]
+    },
+    {
+      "id": 70,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        3371,
+        -507
+      ],
+      "size": [
+        315,
+        559
+      ],
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 162,
+          "slot_index": 0
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "2048_1P_IUP_FORTUNA",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 20,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "2048_1P_IUP_FORTUNA_00099.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4"
+          }
+        }
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 59,
+      "type": "ADE_AnimateDiffUniformContextOptions",
+      "pos": [
+        -159,
+        19
+      ],
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prev_context",
+          "type": "CONTEXT_OPTIONS",
+          "link": null
+        },
+        {
+          "name": "view_opts",
+          "type": "VIEW_OPTS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONTEXT_OPTIONS",
+          "type": "CONTEXT_OPTIONS",
+          "links": [
+            93
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ADE_AnimateDiffUniformContextOptions"
+      },
+      "widgets_values": [
+        16,
+        1,
+        4,
+        "uniform",
+        false,
+        "pyramid",
+        false,
+        0,
+        1
+      ]
+    },
+    {
+      "id": 115,
+      "type": "ADE_AnimateDiffSamplingSettings",
+      "pos": [
+        109,
+        134
+      ],
+      "size": [
+        327.02843612782294,
+        218.9960925015405
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise_layers",
+          "type": "NOISE_LAYERS",
+          "link": null
+        },
+        {
+          "name": "iteration_opts",
+          "type": "ITERATION_OPTS",
+          "link": null
+        },
+        {
+          "name": "seed_override",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "seed_override"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "settings",
+          "type": "SAMPLE_SETTINGS",
+          "links": [
+            281
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ADE_AnimateDiffSamplingSettings"
+      },
+      "widgets_values": [
+        0,
+        "FreeNoise",
+        "comfy",
+        0,
+        0,
+        false
+      ]
+    },
+    {
+      "id": 106,
+      "type": "Note",
+      "pos": [
+        1766,
+        170
+      ],
+      "size": [
+        266.4518438445268,
+        1177.7383837904345
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"(fire:1.2)\",\n\"90\" : \"(fire:1.2)\",\n\"100\" : \"small gem dust\",\n\"170\" : \"small gem dust\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"\n\n\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"(leaves:1.2)\",\n\"90\" : \"(leaves:1.2)\",\n\"100\" : \"snakes\",\n\"170\" : \"snakes\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"\n\n\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"pond, water lilies\",\n\"90\" : \"pond, water lilies\",\n\"100\" : \"koi fish\",\n\"170\" : \"koi fish\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"\n\n\n\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"spaghetti with tomato sauce\",\n\"90\" : \"spaghetti with tomato sauce\",\n\"100\" : \"basil leaves and grated cheese\",\n\"170\" : \"basil leaves and grated cheese\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"\n\n\n\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"green mist\",\n\"90\" : \"green mist\",\n\"100\" : \"ghostly screaming faces, poltergeist\",\n\"170\" : \"ghostly screaming faces, poltergeist\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"\n\n\n\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"tadpole\",\n\"90\" : \"tadpole\",\n\"100\" : \"frogs and water lily flowers\",\n\"170\" : \"frogs and water lily flowers\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"\n\n\n\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"feathers\",\n\"90\" : \"feathers\",\n\"100\" : \"bones and claws\",\n\"170\" : \"bones and claws\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"\n\n\n\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"gold jewelry and coins\",\n\"90\" : \"gold jewelry and coins\",\n\"100\" : \"red dragon\",\n\"170\" : \"red dragon\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"\n\n\n\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"dirt and worms\",\n\"90\" : \"dirt and worms\",\n\"100\" : \"mushrooms\",\n\"170\" : \"mushrooms\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"\n\n\n\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"beer\",\n\"90\" : \"beer\",\n\"100\" : \"colorful magic spells\",\n\"170\" : \"colorful magic spells\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"\n\n\n\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"(worms:1.2)\",\n\"90\" : \"(worms:1.2)\",\n\"100\" : \"mushrooms\",\n\"170\" : \"mushrooms\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"\n\n\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"galaxies\",\n\"90\" : \"galaxies\",\n\"100\" : \"planets\",\n\"170\" : \"planets\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"\n\n\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"(meat:1.2)\",\n\"90\" : \"(meat:1.2)\",\n\"100\" : \"ghostly screaming faces, (poltergeist:1.2)\",\n\"170\" : \"ghostly screaming faces, (poltergeist:1.2)\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"\n\n\n\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"(gold:1.1) treasure\",\n\"90\" : \"(gold:1.1) treasure\",\n\"100\" : \"red (dragons:1.05)\",\n\"170\" : \"red (dragons:1.05)\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"\n\n\n\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"(jewelry:1.2)\",\n\"90\" : \"(jewelry:1.2)\",\n\"100\" : \"dragon\",\n\"170\" : \"dragon\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"\n\n\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"snow\",\n\"90\" : \"snow\",\n\"100\" : \"tusks\",\n\"170\" : \"tusks\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"\n\n\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"sand\",\n\"90\" : \"sand\",\n\"100\" : \"scorpion\",\n\"170\" : \"scorpion\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"\n\n\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"ocean waves\",\n\"90\" : \"ocean waves\",\n\"100\" : \"seagull\",\n\"170\" : \"seagull\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"\n\n\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"clouds\",\n\"90\" : \"clouds\",\n\"100\" : \"water splash\",\n\"170\" : \"water splash\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"\n\n\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"hairs\",\n\"90\" : \"hairs\",\n\"100\" : \"fingers\",\n\"170\" : \"fingers\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\""
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 66,
+      "type": "BatchPromptSchedule",
+      "pos": [
+        1301,
+        28
+      ],
+      "size": {
+        "0": 408.06048583984375,
+        "1": 626.5186767578125
+      },
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 234
+        },
+        {
+          "name": "max_frames",
+          "type": "INT",
+          "link": 235,
+          "widget": {
+            "name": "max_frames"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "POS",
+          "type": "CONDITIONING",
+          "links": [
+            206
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "NEG",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BatchPromptSchedule"
+      },
+      "widgets_values": [
+        "\"0\" : \"a white stone\",\n\"40\" : \"a white stone\",\n\"60\" : \"bread\",\n\"90\" : \"bread\",\n\"112\" : \"hotdogs and ketchup\",\n\"170\" : \"hotdogs and ketchup\",\n\"180\" : \"a white stone\",\n\"200\" : \"a white stone\"",
+        100,
+        false,
+        "a beautiful photo of",
+        "on (black:1.4) background",
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 74,
+      "type": "GMFSS Fortuna VFI",
+      "pos": [
+        3228,
+        131
+      ],
+      "size": {
+        "0": 443.4000244140625,
+        "1": 150
+      },
+      "flags": {},
+      "order": 48,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "frames",
+          "type": "IMAGE",
+          "link": 285,
+          "slot_index": 0
+        },
+        {
+          "name": "optional_interpolation_states",
+          "type": "INTERPOLATION_STATES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            179
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GMFSS Fortuna VFI"
+      },
+      "widgets_values": [
+        "GMFSS_fortuna_union",
+        10,
+        2,
+        true
+      ]
+    }
+  ],
+  "links": [
+    [
+      10,
+      2,
+      0,
+      10,
+      1,
+      "VAE"
+    ],
+    [
+      28,
+      20,
+      0,
+      24,
+      2,
+      "CONTROL_NET"
+    ],
+    [
+      60,
+      2,
+      0,
+      42,
+      1,
+      "VAE"
+    ],
+    [
+      69,
+      50,
+      0,
+      39,
+      0,
+      "IMAGE"
+    ],
+    [
+      71,
+      50,
+      2,
+      9,
+      0,
+      "INT"
+    ],
+    [
+      90,
+      58,
+      0,
+      56,
+      0,
+      "UPSCALE_MODEL"
+    ],
+    [
+      93,
+      59,
+      0,
+      33,
+      1,
+      "CONTEXT_OPTIONS"
+    ],
+    [
+      101,
+      5,
+      0,
+      61,
+      4,
+      "INT"
+    ],
+    [
+      104,
+      33,
+      0,
+      62,
+      0,
+      "MODEL"
+    ],
+    [
+      107,
+      9,
+      0,
+      62,
+      3,
+      "LATENT"
+    ],
+    [
+      108,
+      5,
+      0,
+      62,
+      4,
+      "INT"
+    ],
+    [
+      109,
+      62,
+      0,
+      10,
+      0,
+      "LATENT"
+    ],
+    [
+      120,
+      50,
+      0,
+      64,
+      0,
+      "IMAGE"
+    ],
+    [
+      154,
+      6,
+      0,
+      24,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      155,
+      53,
+      0,
+      67,
+      0,
+      "MODEL"
+    ],
+    [
+      162,
+      69,
+      0,
+      70,
+      0,
+      "IMAGE"
+    ],
+    [
+      179,
+      74,
+      0,
+      75,
+      0,
+      "IMAGE"
+    ],
+    [
+      192,
+      10,
+      0,
+      80,
+      0,
+      "IMAGE"
+    ],
+    [
+      194,
+      42,
+      0,
+      81,
+      0,
+      "IMAGE"
+    ],
+    [
+      195,
+      42,
+      0,
+      56,
+      1,
+      "IMAGE"
+    ],
+    [
+      196,
+      84,
+      0,
+      83,
+      0,
+      "UPSCALE_MODEL"
+    ],
+    [
+      206,
+      66,
+      0,
+      24,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      222,
+      30,
+      1,
+      4,
+      0,
+      "CLIP"
+    ],
+    [
+      229,
+      30,
+      1,
+      53,
+      1,
+      "CLIP"
+    ],
+    [
+      231,
+      30,
+      0,
+      53,
+      0,
+      "MODEL"
+    ],
+    [
+      232,
+      4,
+      0,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      233,
+      4,
+      0,
+      3,
+      0,
+      "CLIP"
+    ],
+    [
+      234,
+      4,
+      0,
+      66,
+      0,
+      "CLIP"
+    ],
+    [
+      235,
+      50,
+      2,
+      66,
+      1,
+      "INT"
+    ],
+    [
+      245,
+      62,
+      0,
+      40,
+      0,
+      "LATENT"
+    ],
+    [
+      255,
+      64,
+      0,
+      24,
+      3,
+      "IMAGE"
+    ],
+    [
+      257,
+      101,
+      0,
+      102,
+      2,
+      "CONTROL_NET"
+    ],
+    [
+      258,
+      24,
+      0,
+      102,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      259,
+      24,
+      1,
+      102,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      261,
+      103,
+      0,
+      104,
+      0,
+      "IMAGE"
+    ],
+    [
+      262,
+      104,
+      0,
+      97,
+      0,
+      "IMAGE"
+    ],
+    [
+      263,
+      102,
+      0,
+      62,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      264,
+      102,
+      1,
+      62,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      265,
+      104,
+      0,
+      105,
+      0,
+      "IMAGE"
+    ],
+    [
+      266,
+      105,
+      0,
+      96,
+      0,
+      "IMAGE"
+    ],
+    [
+      267,
+      105,
+      0,
+      102,
+      3,
+      "IMAGE"
+    ],
+    [
+      269,
+      83,
+      0,
+      69,
+      0,
+      "IMAGE"
+    ],
+    [
+      276,
+      102,
+      0,
+      61,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      277,
+      102,
+      1,
+      61,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      278,
+      61,
+      0,
+      42,
+      0,
+      "LATENT"
+    ],
+    [
+      279,
+      40,
+      0,
+      61,
+      3,
+      "LATENT"
+    ],
+    [
+      280,
+      33,
+      0,
+      61,
+      0,
+      "MODEL"
+    ],
+    [
+      281,
+      115,
+      0,
+      33,
+      4,
+      "SAMPLE_SETTINGS"
+    ],
+    [
+      282,
+      30,
+      0,
+      118,
+      0,
+      "MODEL"
+    ],
+    [
+      283,
+      118,
+      0,
+      33,
+      0,
+      "MODEL"
+    ],
+    [
+      284,
+      120,
+      1,
+      101,
+      0,
+      "TIMESTEP_KEYFRAME"
+    ],
+    [
+      285,
+      42,
+      0,
+      74,
+      0,
+      "IMAGE"
+    ],
+    [
+      286,
+      10,
+      0,
+      121,
+      0,
+      "IMAGE"
+    ],
+    [
+      288,
+      10,
+      0,
+      83,
+      1,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Change this to match your model reqs",
+      "bounding": [
+        -18,
+        302,
+        416,
+        165
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Animation length determined by Latents passed in",
+      "bounding": [
+        853,
+        -210,
+        550,
+        191
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "From adv-controlnet/image",
+      "bounding": [
+        49,
+        -398,
+        454,
+        253
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
