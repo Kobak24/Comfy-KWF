@@ -1,8 +1,10 @@
-NODE TESTING folder contains just single workflow for testing various nodes, hint is in the name
+NODE TESTING folder contains just simple workflows for testing various nodes, the hint is in the name
 
-STYLIZE contains more complex workflows for t2v or v2v generation using various approaches, might not all be clear and cleaned
+STYLIZE contains more complex workflows for t2v or v2v generation using various approaches, which might not all be clear and clean
 
-HEROWF contains cleaned workflows with notes, the one I've fully developed and usually use.
+HEROWF contains cleaned workflows with notes, which I've fully developed and usually use.
+
+__IMG_TIPS contains screenshots about workflows or node usage found here and there
 
 Here are some random info about my setup:
 ** Platform: Windows
@@ -79,7 +81,7 @@ Installed nodes:
    Installed nodes:
 
 BIG IFs:
-If some nodes are missing from the list but there's a workflow in the folder is because maybe those have been added natively into Comfyui or I'm no longer using them for compatibility issues between packages.
-If some models can't be found just open an Issue highlighting the workflow's name where the model can't be found and please report the name of the model so my search can be faster.
+If some nodes are missing from this list but there's a workflow using them in the folders, maybe those have been added natively into Comfyui or I'm no longer using them for compatibility issues between packages.
+If some models can't be found, open an Issue highlighting the workflow's name and reporting the model's name so my search can be faster.
 
-Hop in to Banodoco Discord :)
+Hop into Banodoco Discord :)
