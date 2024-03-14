@@ -1,0 +1,2331 @@
+{
+  "last_node_id": 143,
+  "last_link_id": 260,
+  "nodes": [
+    {
+      "id": 38,
+      "type": "Mute / Bypass Repeater (rgthree)",
+      "pos": {
+        "0": 3125.24462890625,
+        "1": 1110.0152587890625,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 140,
+        "1": 26
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": null,
+          "dir": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": [
+            41
+          ],
+          "color_on": "#Fc0",
+          "color_off": "#a80",
+          "dir": 4,
+          "slot_index": 0
+        }
+      ],
+      "title": ".",
+      "properties": {}
+    },
+    {
+      "id": 50,
+      "type": "ADE_LoopedUniformContextOptions",
+      "pos": [
+        1710,
+        520
+      ],
+      "size": {
+        "0": 317.4000244140625,
+        "1": 246
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prev_context",
+          "type": "CONTEXT_OPTIONS",
+          "link": null
+        },
+        {
+          "name": "view_opts",
+          "type": "VIEW_OPTS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONTEXT_OPTS",
+          "type": "CONTEXT_OPTIONS",
+          "links": [
+            53
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ADE_LoopedUniformContextOptions"
+      },
+      "widgets_values": [
+        16,
+        1,
+        4,
+        false,
+        "pyramid",
+        false,
+        0,
+        1
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 74,
+      "type": "Mute / Bypass Repeater (rgthree)",
+      "pos": {
+        "0": 2700,
+        "1": 1800,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 140,
+        "1": 26
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": null,
+          "dir": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": [
+            96
+          ],
+          "color_on": "#Fc0",
+          "color_off": "#a80",
+          "dir": 4,
+          "slot_index": 0
+        }
+      ],
+      "title": ".",
+      "properties": {}
+    },
+    {
+      "id": 36,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        2995.2445547265625,
+        560.0150889422606
+      ],
+      "size": [
+        320,
+        472.75
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 40
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": null
+        },
+        {
+          "name": "batch_manager",
+          "type": "VHS_BatchManager",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "zeroscopexl_interp",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 5,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "zeroscopexl_interp_00001.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 27,
+      "type": "Mute / Bypass Repeater (rgthree)",
+      "pos": {
+        "0": 670,
+        "1": 1510,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 140,
+        "1": 26
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": null,
+          "dir": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": [
+            28
+          ],
+          "color_on": "#Fc0",
+          "color_off": "#a80",
+          "dir": 4,
+          "slot_index": 0
+        }
+      ],
+      "title": ".",
+      "properties": {}
+    },
+    {
+      "id": 96,
+      "type": "Mute / Bypass Repeater (rgthree)",
+      "pos": {
+        "0": 1000,
+        "1": 1530,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 140,
+        "1": 26
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": null,
+          "dir": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": [
+            133
+          ],
+          "color_on": "#Fc0",
+          "color_off": "#a80",
+          "dir": 4,
+          "slot_index": 0
+        }
+      ],
+      "title": ".",
+      "properties": {}
+    },
+    {
+      "id": 37,
+      "type": "Fast Bypasser (rgthree)",
+      "pos": {
+        "0": 3105.24462890625,
+        "1": 1080.0152587890625,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 210,
+        "1": 78
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": ".",
+          "type": "*",
+          "link": 41,
+          "dir": 3,
+          "slot_index": 0,
+          "label": ""
+        },
+        {
+          "name": "",
+          "type": "*",
+          "link": null,
+          "dir": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": [],
+          "dir": 4,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "toggleRestriction": "default"
+      },
+      "color": "#282828",
+      "bgcolor": "#141414"
+    },
+    {
+      "id": 52,
+      "type": "IPAdapterEncoder",
+      "pos": [
+        2100,
+        750
+      ],
+      "size": {
+        "0": 325.594970703125,
+        "1": 259.869140625
+      },
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip_vision",
+          "type": "CLIP_VISION",
+          "link": 55,
+          "slot_index": 0
+        },
+        {
+          "name": "image_1",
+          "type": "IMAGE",
+          "link": 248
+        },
+        {
+          "name": "image_2",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_3",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_4",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "EMBEDS",
+          "type": "EMBEDS",
+          "links": [
+            58
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IPAdapterEncoder"
+      },
+      "widgets_values": [
+        true,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 71,
+      "type": "ACN_AdvancedControlNetApply",
+      "pos": [
+        2110,
+        1160
+      ],
+      "size": {
+        "0": 323.38641357421875,
+        "1": 266
+      },
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 259
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 260
+        },
+        {
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 87,
+          "slot_index": 2
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 88
+        },
+        {
+          "name": "mask_optional",
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "timestep_kf",
+          "type": "TIMESTEP_KEYFRAME",
+          "link": null
+        },
+        {
+          "name": "latent_kf_override",
+          "type": "LATENT_KEYFRAME",
+          "link": null
+        },
+        {
+          "name": "weights_override",
+          "type": "CONTROL_NET_WEIGHTS",
+          "link": null
+        },
+        {
+          "name": "model_optional",
+          "type": "MODEL",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            91
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            92
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "model_opt",
+          "type": "MODEL",
+          "links": null,
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ACN_AdvancedControlNetApply"
+      },
+      "widgets_values": [
+        0.66,
+        0.25,
+        0.75
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 42,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        810,
+        380
+      ],
+      "size": {
+        "0": 241.79998779296875,
+        "1": 46
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 46
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 147
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            181
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageUpscaleWithModel"
+      }
+    },
+    {
+      "id": 137,
+      "type": "ImageFromBatch+",
+      "pos": [
+        1350,
+        1020
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 246
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            248
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageFromBatch+"
+      },
+      "widgets_values": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 66,
+      "type": "Reroute",
+      "pos": [
+        1210,
+        240
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 244
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "links": [
+            88,
+            235,
+            246
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 102,
+      "type": "Reroute",
+      "pos": [
+        810,
+        230
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 252
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "links": [
+            147
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 35,
+      "type": "FILM VFI",
+      "pos": [
+        2995.2445547265625,
+        360.01508894226083
+      ],
+      "size": {
+        "0": 299.9092712402344,
+        "1": 150
+      },
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "frames",
+          "type": "IMAGE",
+          "link": 161
+        },
+        {
+          "name": "optional_interpolation_states",
+          "type": "INTERPOLATION_STATES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            40
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FILM VFI"
+      },
+      "widgets_values": [
+        "film_net_fp32.pt",
+        10,
+        3
+      ]
+    },
+    {
+      "id": 43,
+      "type": "UltimateSDUpscale",
+      "pos": [
+        2530,
+        360
+      ],
+      "size": {
+        "0": 397.2447509765625,
+        "1": 836.3758544921875
+      },
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 235
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 236
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 91
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 92
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 255
+        },
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 49,
+          "slot_index": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            50,
+            161
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltimateSDUpscale"
+      },
+      "widgets_values": [
+        2,
+        44,
+        "fixed",
+        6,
+        1,
+        "lcm",
+        "sgm_uniform",
+        0.3,
+        "Linear",
+        512,
+        512,
+        32,
+        64,
+        "Half Tile",
+        0.75,
+        64,
+        16,
+        32,
+        true,
+        false
+      ],
+      "color": "#282828",
+      "bgcolor": "#141414"
+    },
+    {
+      "id": 44,
+      "type": "Upscale Model Loader",
+      "pos": [
+        2540,
+        248
+      ],
+      "size": {
+        "0": 317.89117431640625,
+        "1": 78
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            49
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MODEL_NAME_TEXT",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Upscale Model Loader"
+      },
+      "widgets_values": [
+        "4x-UltraSharp.pth"
+      ],
+      "color": "#282828",
+      "bgcolor": "#141414"
+    },
+    {
+      "id": 94,
+      "type": "ImageScale",
+      "pos": [
+        810,
+        460
+      ],
+      "size": {
+        "0": 315,
+        "1": 130
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 181
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            130
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScale"
+      },
+      "widgets_values": [
+        "bilinear",
+        1024,
+        576,
+        "disabled"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        450,
+        970
+      ],
+      "size": [
+        324.9703063964844,
+        473.4279479980469
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 249
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": null
+        },
+        {
+          "name": "batch_manager",
+          "type": "VHS_BatchManager",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 15,
+        "loop_count": 0,
+        "filename_prefix": "zeroscope576",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 5,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "zeroscope576_00005.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 93,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        810,
+        970
+      ],
+      "size": [
+        322.7325744628906,
+        474.287073135376
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 131
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": null
+        },
+        {
+          "name": "batch_manager",
+          "type": "VHS_BatchManager",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 15,
+        "loop_count": 0,
+        "filename_prefix": "zeroscopexl_1280",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 5,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "zeroscopexl_1280_00005.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 45,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        2530,
+        1240
+      ],
+      "size": [
+        394.71258544921875,
+        514.7758293151855
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 50,
+          "slot_index": 0
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": null
+        },
+        {
+          "name": "batch_manager",
+          "type": "VHS_BatchManager",
+          "link": null,
+          "slot_index": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 15,
+        "loop_count": 0,
+        "filename_prefix": "hr_ult",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 5,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "hr_ult_00001.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4"
+          }
+        }
+      },
+      "color": "#282828",
+      "bgcolor": "#141414"
+    },
+    {
+      "id": 73,
+      "type": "Fast Bypasser (rgthree)",
+      "pos": {
+        "0": 2700,
+        "1": 1790,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 210,
+        "1": 78
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": ".",
+          "type": "*",
+          "link": 96,
+          "dir": 3,
+          "slot_index": 0,
+          "label": ""
+        },
+        {
+          "name": "",
+          "type": "*",
+          "link": null,
+          "dir": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": [],
+          "dir": 4,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "toggleRestriction": "default"
+      },
+      "color": "#282828",
+      "bgcolor": "#141414"
+    },
+    {
+      "id": 95,
+      "type": "Fast Bypasser (rgthree)",
+      "pos": {
+        "0": 920,
+        "1": 1510,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 210,
+        "1": 78
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": ".",
+          "type": "*",
+          "link": 133,
+          "dir": 3,
+          "slot_index": 0,
+          "label": ""
+        },
+        {
+          "name": "",
+          "type": "*",
+          "link": null,
+          "dir": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": [],
+          "dir": 4,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "toggleRestriction": "default"
+      },
+      "color": "#282828",
+      "bgcolor": "#141414"
+    },
+    {
+      "id": 26,
+      "type": "Fast Bypasser (rgthree)",
+      "pos": {
+        "0": 570,
+        "1": 1510,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 210,
+        "1": 78
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": ".",
+          "type": "*",
+          "link": 28,
+          "dir": 3,
+          "slot_index": 0,
+          "label": ""
+        },
+        {
+          "name": "",
+          "type": "*",
+          "link": null,
+          "dir": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": [],
+          "dir": 4,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "toggleRestriction": "default"
+      },
+      "color": "#282828",
+      "bgcolor": "#141414"
+    },
+    {
+      "id": 138,
+      "type": "Modelscopet2v",
+      "pos": [
+        450,
+        640
+      ],
+      "size": {
+        "0": 315,
+        "1": 274
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "link": 250,
+          "widget": {
+            "name": "prompt"
+          }
+        },
+        {
+          "name": "negative_prompt",
+          "type": "STRING",
+          "link": 251,
+          "widget": {
+            "name": "negative_prompt"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            249,
+            252
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Modelscopet2v"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "cerspense/zeroscope_v2_576w",
+        25,
+        9,
+        46,
+        "fixed",
+        576,
+        320,
+        24
+      ]
+    },
+    {
+      "id": 92,
+      "type": "Modelscopev2v",
+      "pos": [
+        810,
+        640
+      ],
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_frames",
+          "type": "IMAGE",
+          "link": 130
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "link": 136,
+          "widget": {
+            "name": "prompt"
+          }
+        },
+        {
+          "name": "negative_prompt",
+          "type": "STRING",
+          "link": 137,
+          "widget": {
+            "name": "negative_prompt"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            131,
+            244
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Modelscopev2v"
+      },
+      "widgets_values": [
+        "darth vader surfing, dramatic lighting, studio lighting, cinematic 8k",
+        "cerspense/zeroscope_v2_XL",
+        "cerspense/zeroscope_v2_XL",
+        0.7000000000000001,
+        25,
+        8.5,
+        46,
+        "fixed",
+        false,
+        true
+      ]
+    },
+    {
+      "id": 53,
+      "type": "IPAdapterApplyEncoded",
+      "pos": [
+        2114,
+        401
+      ],
+      "size": {
+        "0": 315,
+        "1": 214
+      },
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ipadapter",
+          "type": "IPADAPTER",
+          "link": 57,
+          "slot_index": 0
+        },
+        {
+          "name": "embeds",
+          "type": "EMBEDS",
+          "link": 58
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 59
+        },
+        {
+          "name": "attn_mask",
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            236
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IPAdapterApplyEncoded"
+      },
+      "widgets_values": [
+        1,
+        "original",
+        0,
+        1,
+        false
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 140,
+      "type": "VAELoader",
+      "pos": [
+        1293,
+        1359
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            255
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "vaeFtMse840000Ema_v100.pt"
+      ]
+    },
+    {
+      "id": 139,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        1213,
+        1190
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            253
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            254
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "dreamshaper_8.safetensors"
+      ]
+    },
+    {
+      "id": 72,
+      "type": "ControlNetLoaderAdvanced",
+      "pos": [
+        2110,
+        1060
+      ],
+      "size": {
+        "0": 327.6000061035156,
+        "1": 58
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "timestep_keyframe",
+          "type": "TIMESTEP_KEYFRAME",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            87
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetLoaderAdvanced"
+      },
+      "widgets_values": [
+        "ad\\controlnet_checkpoint_GIF.ckpt"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 23,
+      "type": "SeargePromptText",
+      "pos": [
+        430,
+        430
+      ],
+      "size": {
+        "0": 341.708984375,
+        "1": 114.05873107910156
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "links": [
+            137,
+            251
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Negative",
+      "properties": {
+        "Node name for S&R": "SeargePromptText"
+      },
+      "widgets_values": [
+        "extra limbs, dull floor, blurry, low quality, low detail, artifacts, fast motion, bad lighting"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 22,
+      "type": "SeargePromptText",
+      "pos": [
+        428,
+        212
+      ],
+      "size": {
+        "0": 342.7967224121094,
+        "1": 174.7954864501953
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "links": [
+            136,
+            250
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Positive",
+      "properties": {
+        "Node name for S&R": "SeargePromptText"
+      },
+      "widgets_values": [
+        "the pope eating spaghetti"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 141,
+      "type": "LoraLoader",
+      "pos": [
+        1572,
+        1172
+      ],
+      "size": {
+        "0": 315,
+        "1": 126
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 253
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 254
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            256
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            257,
+            258
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "LCM_LoRA_Weights_SD15.safetensors",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 142,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1640,
+        1346
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 257
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            259
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "the pope eating spaghetti, incredibly detailed, smooth motion, dramatic lighting, studio lighting, dynamic lighting, action shot, high quality, 4k"
+      ]
+    },
+    {
+      "id": 143,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1661,
+        1601
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 258
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            260
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "extra limbs, dull floor, blurry, low quality, low detail, artifacts, fast motion, bad lighting, "
+      ]
+    },
+    {
+      "id": 41,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        810,
+        290
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            46
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4x-UltraSharp.pth"
+      ]
+    },
+    {
+      "id": 55,
+      "type": "IPAdapterModelLoader",
+      "pos": [
+        2096,
+        286
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IPADAPTER",
+          "type": "IPADAPTER",
+          "links": [
+            57
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IPAdapterModelLoader"
+      },
+      "widgets_values": [
+        "ip-adapter-plus_sd15.safetensors"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 54,
+      "type": "CLIPVisionLoader",
+      "pos": [
+        2100,
+        650
+      ],
+      "size": {
+        "0": 328.5231628417969,
+        "1": 58
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CLIP_VISION",
+          "type": "CLIP_VISION",
+          "links": [
+            55
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPVisionLoader"
+      },
+      "widgets_values": [
+        "SD1.5\\SD 1.5 model.safetensors"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 49,
+      "type": "ADE_AnimateDiffLoaderWithContext",
+      "pos": [
+        1710,
+        250
+      ],
+      "size": {
+        "0": 315,
+        "1": 230
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 256
+        },
+        {
+          "name": "context_options",
+          "type": "CONTEXT_OPTIONS",
+          "link": 53,
+          "slot_index": 1
+        },
+        {
+          "name": "motion_lora",
+          "type": "MOTION_LORA",
+          "link": null,
+          "slot_index": 2
+        },
+        {
+          "name": "ad_settings",
+          "type": "AD_SETTINGS",
+          "link": null
+        },
+        {
+          "name": "sample_settings",
+          "type": "SAMPLE_SETTINGS",
+          "link": null
+        },
+        {
+          "name": "ad_keyframes",
+          "type": "AD_KEYFRAMES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            59
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ADE_AnimateDiffLoaderWithContext"
+      },
+      "widgets_values": [
+        "sd15_t2v_beta_LCM.ckpt",
+        "lcm >> sqrt_linear",
+        1,
+        false
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    }
+  ],
+  "links": [
+    [
+      28,
+      27,
+      0,
+      26,
+      0,
+      "*"
+    ],
+    [
+      40,
+      35,
+      0,
+      36,
+      0,
+      "IMAGE"
+    ],
+    [
+      41,
+      38,
+      0,
+      37,
+      0,
+      "*"
+    ],
+    [
+      46,
+      41,
+      0,
+      42,
+      0,
+      "UPSCALE_MODEL"
+    ],
+    [
+      49,
+      44,
+      0,
+      43,
+      5,
+      "UPSCALE_MODEL"
+    ],
+    [
+      50,
+      43,
+      0,
+      45,
+      0,
+      "IMAGE"
+    ],
+    [
+      53,
+      50,
+      0,
+      49,
+      1,
+      "CONTEXT_OPTIONS"
+    ],
+    [
+      55,
+      54,
+      0,
+      52,
+      0,
+      "CLIP_VISION"
+    ],
+    [
+      57,
+      55,
+      0,
+      53,
+      0,
+      "IPADAPTER"
+    ],
+    [
+      58,
+      52,
+      0,
+      53,
+      1,
+      "EMBEDS"
+    ],
+    [
+      59,
+      49,
+      0,
+      53,
+      2,
+      "MODEL"
+    ],
+    [
+      87,
+      72,
+      0,
+      71,
+      2,
+      "CONTROL_NET"
+    ],
+    [
+      88,
+      66,
+      0,
+      71,
+      3,
+      "IMAGE"
+    ],
+    [
+      91,
+      71,
+      0,
+      43,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      92,
+      71,
+      1,
+      43,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      96,
+      74,
+      0,
+      73,
+      0,
+      "*"
+    ],
+    [
+      130,
+      94,
+      0,
+      92,
+      0,
+      "IMAGE"
+    ],
+    [
+      131,
+      92,
+      0,
+      93,
+      0,
+      "IMAGE"
+    ],
+    [
+      133,
+      96,
+      0,
+      95,
+      0,
+      "*"
+    ],
+    [
+      136,
+      22,
+      0,
+      92,
+      1,
+      "STRING"
+    ],
+    [
+      137,
+      23,
+      0,
+      92,
+      2,
+      "STRING"
+    ],
+    [
+      147,
+      102,
+      0,
+      42,
+      1,
+      "IMAGE"
+    ],
+    [
+      161,
+      43,
+      0,
+      35,
+      0,
+      "IMAGE"
+    ],
+    [
+      181,
+      42,
+      0,
+      94,
+      0,
+      "IMAGE"
+    ],
+    [
+      235,
+      66,
+      0,
+      43,
+      0,
+      "IMAGE"
+    ],
+    [
+      236,
+      53,
+      0,
+      43,
+      1,
+      "MODEL"
+    ],
+    [
+      244,
+      92,
+      0,
+      66,
+      0,
+      "*"
+    ],
+    [
+      246,
+      66,
+      0,
+      137,
+      0,
+      "IMAGE"
+    ],
+    [
+      248,
+      137,
+      0,
+      52,
+      1,
+      "IMAGE"
+    ],
+    [
+      249,
+      138,
+      0,
+      2,
+      0,
+      "IMAGE"
+    ],
+    [
+      250,
+      22,
+      0,
+      138,
+      0,
+      "STRING"
+    ],
+    [
+      251,
+      23,
+      0,
+      138,
+      1,
+      "STRING"
+    ],
+    [
+      252,
+      138,
+      0,
+      102,
+      0,
+      "*"
+    ],
+    [
+      253,
+      139,
+      0,
+      141,
+      0,
+      "MODEL"
+    ],
+    [
+      254,
+      139,
+      1,
+      141,
+      1,
+      "CLIP"
+    ],
+    [
+      255,
+      140,
+      0,
+      43,
+      4,
+      "VAE"
+    ],
+    [
+      256,
+      141,
+      0,
+      49,
+      0,
+      "MODEL"
+    ],
+    [
+      257,
+      141,
+      1,
+      142,
+      0,
+      "CLIP"
+    ],
+    [
+      258,
+      141,
+      1,
+      143,
+      0,
+      "CLIP"
+    ],
+    [
+      259,
+      142,
+      0,
+      71,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      260,
+      143,
+      0,
+      71,
+      1,
+      "CONDITIONING"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "T2V",
+      "bounding": [
+        430,
+        551,
+        359,
+        1041
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Interpolate",
+      "bounding": [
+        2969,
+        283,
+        356,
+        900
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "SD Ultimate Upscale (slow)",
+      "bounding": [
+        1159,
+        173,
+        1785,
+        1711
+      ],
+      "color": "#444",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "HiRes Fix",
+      "bounding": [
+        792,
+        175,
+        346,
+        1417
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
