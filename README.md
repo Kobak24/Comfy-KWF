@@ -1,3 +1,5 @@
+----> Some workflows use the old Ipa Adapter Plus repo, use git reset --hard 6a411dc to revert to the working one. Workflows with the new IPA Adapter have that stated in the Name (IPAV2)
+
 NODE TESTING folder contains just simple workflows for testing various nodes, the hint is in the name
 
 STYLIZE contains more complex workflows for t2v or v2v generation using various approaches, which might not all be clear and clean
