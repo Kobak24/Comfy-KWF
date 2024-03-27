@@ -1,0 +1,497 @@
+{
+  "last_node_id": 59,
+  "last_link_id": 143,
+  "nodes": [
+    {
+      "id": 56,
+      "type": "Load Motionctrl Checkpoint",
+      "pos": [
+        428,
+        -149
+      ],
+      "size": {
+        "0": 315,
+        "1": 142
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MOTIONCTRL",
+          "links": [
+            127,
+            128
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "clip",
+          "type": "EMBEDDER",
+          "links": [
+            129
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "links": [
+            130
+          ],
+          "shape": 3,
+          "slot_index": 2
+        },
+        {
+          "name": "ddim_sampler",
+          "type": "SAMPLER",
+          "links": [
+            131
+          ],
+          "shape": 3,
+          "slot_index": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Load Motionctrl Checkpoint"
+      },
+      "widgets_values": [
+        "motionctrl.pth",
+        16
+      ]
+    },
+    {
+      "id": 48,
+      "type": "Load Motion Camera Preset",
+      "pos": [
+        429,
+        213
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "POINTS",
+          "type": "STRING",
+          "links": [
+            141
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Load Motion Camera Preset"
+      },
+      "widgets_values": [
+        "U"
+      ]
+    },
+    {
+      "id": 58,
+      "type": "Motionctrl Cond",
+      "pos": [
+        869,
+        100
+      ],
+      "size": {
+        "0": 400,
+        "1": 320
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MOTIONCTRL",
+          "link": 127
+        },
+        {
+          "name": "camera",
+          "type": "STRING",
+          "link": 141,
+          "widget": {
+            "name": "camera"
+          }
+        },
+        {
+          "name": "traj",
+          "type": "STRING",
+          "link": 142,
+          "widget": {
+            "name": "traj"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            134
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            135
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "traj_list",
+          "type": "TRAJ_LIST",
+          "links": [
+            136
+          ],
+          "shape": 3,
+          "slot_index": 2
+        },
+        {
+          "name": "rt_list",
+          "type": "RT_LIST",
+          "links": [
+            137
+          ],
+          "shape": 3,
+          "slot_index": 3
+        },
+        {
+          "name": "traj",
+          "type": "TRAJ_FEATURES",
+          "links": [
+            138
+          ],
+          "shape": 3,
+          "slot_index": 4
+        },
+        {
+          "name": "rt",
+          "type": "RT",
+          "links": [
+            139
+          ],
+          "shape": 3,
+          "slot_index": 5
+        },
+        {
+          "name": "noise_shape",
+          "type": "NOISE_SHAPE",
+          "links": [
+            140
+          ],
+          "shape": 3,
+          "slot_index": 6
+        },
+        {
+          "name": "context_overlap",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Motionctrl Cond"
+      },
+      "widgets_values": [
+        "a rose swaying in the wind",
+        "[[1,0,0,0,0,1,0,0,0,0,1,0.2]]",
+        "[[117, 102]]",
+        "control both camera and object motion",
+        0
+      ]
+    },
+    {
+      "id": 49,
+      "type": "Load Motion Traj Preset",
+      "pos": [
+        428,
+        343
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "POINTS",
+          "type": "STRING",
+          "links": [
+            142
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Load Motion Traj Preset"
+      },
+      "widgets_values": [
+        "curve_1",
+        16
+      ]
+    },
+    {
+      "id": 59,
+      "type": "Motionctrl Sample Simple",
+      "pos": [
+        1384,
+        -62
+      ],
+      "size": {
+        "0": 315,
+        "1": 402
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MOTIONCTRL",
+          "link": 128
+        },
+        {
+          "name": "clip",
+          "type": "EMBEDDER",
+          "link": 129
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 130
+        },
+        {
+          "name": "ddim_sampler",
+          "type": "SAMPLER",
+          "link": 131
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 134
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 135
+        },
+        {
+          "name": "traj_list",
+          "type": "TRAJ_LIST",
+          "link": 136
+        },
+        {
+          "name": "rt_list",
+          "type": "RT_LIST",
+          "link": 137
+        },
+        {
+          "name": "traj",
+          "type": "TRAJ_FEATURES",
+          "link": 138
+        },
+        {
+          "name": "rt",
+          "type": "RT",
+          "link": 139
+        },
+        {
+          "name": "noise_shape",
+          "type": "NOISE_SHAPE",
+          "link": 140
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            143
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Motionctrl Sample Simple"
+      },
+      "widgets_values": [
+        12,
+        1734,
+        "randomize",
+        6,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": 45,
+      "type": "PreviewImage",
+      "pos": [
+        1852,
+        62
+      ],
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 143
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    }
+  ],
+  "links": [
+    [
+      127,
+      56,
+      0,
+      58,
+      0,
+      "MOTIONCTRL"
+    ],
+    [
+      128,
+      56,
+      0,
+      59,
+      0,
+      "MOTIONCTRL"
+    ],
+    [
+      129,
+      56,
+      1,
+      59,
+      1,
+      "EMBEDDER"
+    ],
+    [
+      130,
+      56,
+      2,
+      59,
+      2,
+      "VAE"
+    ],
+    [
+      131,
+      56,
+      3,
+      59,
+      3,
+      "SAMPLER"
+    ],
+    [
+      134,
+      58,
+      0,
+      59,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      135,
+      58,
+      1,
+      59,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      136,
+      58,
+      2,
+      59,
+      6,
+      "TRAJ_LIST"
+    ],
+    [
+      137,
+      58,
+      3,
+      59,
+      7,
+      "RT_LIST"
+    ],
+    [
+      138,
+      58,
+      4,
+      59,
+      8,
+      "TRAJ_FEATURES"
+    ],
+    [
+      139,
+      58,
+      5,
+      59,
+      9,
+      "RT"
+    ],
+    [
+      140,
+      58,
+      6,
+      59,
+      10,
+      "NOISE_SHAPE"
+    ],
+    [
+      141,
+      48,
+      0,
+      58,
+      1,
+      "STRING"
+    ],
+    [
+      142,
+      49,
+      0,
+      58,
+      2,
+      "STRING"
+    ],
+    [
+      143,
+      59,
+      0,
+      45,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
