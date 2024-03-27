@@ -1,12 +1,15 @@
 ----> Some workflows use the old Ipa Adapter Plus repo, use git reset --hard 6a411dc to revert to the working one. Workflows with the new IPA Adapter have that stated in the Name (IPA-V2, all HERO WF have been updated, just double check or play with ipadapter strength if something's off)
 
-NODE TESTING folder contains just simple workflows for testing various nodes, the hint is in the name
+NODE_TESTING folder contains just simple workflows for testing various nodes, the hint is in the name
 
-STYLIZE contains more complex workflows for t2v or v2v generation using various approaches, which might not all be clear and clean
+EXPLORATIONS contains more complex workflows for t2v or v2v generation using various approaches, which might not all be clear and clean
 
-HEROWF contains cleaned workflows with notes, which I've fully developed and usually use.
+HERO_WF contains cleaned workflows with notes, which I've fully developed and usually use.
 
-__IMG_TIPS contains screenshots about workflows or node usage found here and there
+IMG_TIPS contains screenshots about workflows or node usage found here and there
+
+RESOURCERS contains some custom things I made like DW poses, initial videos from C4D and animated masks, simple stuff but fun indeed
+
 
 Here are some random info about my setup:
 ** Platform: Windows
