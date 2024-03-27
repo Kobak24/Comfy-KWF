@@ -1,4 +1,4 @@
-----> Some workflows use the old Ipa Adapter Plus repo, use git reset --hard 6a411dc to revert to the working one. Workflows with the new IPA Adapter have that stated in the Name (IPAV2)
+----> Some workflows use the old Ipa Adapter Plus repo, use git reset --hard 6a411dc to revert to the working one. Workflows with the new IPA Adapter have that stated in the Name (IPA-V2, all HERO WF have been updated, just double check or play with ipadapter strength if something's off)
 
 NODE TESTING folder contains just simple workflows for testing various nodes, the hint is in the name
 
