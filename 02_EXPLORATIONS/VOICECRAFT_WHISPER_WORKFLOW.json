@@ -1,0 +1,875 @@
+{
+  "last_node_id": 137,
+  "last_link_id": 183,
+  "nodes": [
+    {
+      "id": 76,
+      "type": "Text Multiline",
+      "pos": [
+        -80,
+        670
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            94
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text Multiline"
+      },
+      "widgets_values": [
+        "The quick brown fox jumps over the lazy dog"
+      ]
+    },
+    {
+      "id": 77,
+      "type": "Text Concatenate",
+      "pos": [
+        380,
+        670
+      ],
+      "size": {
+        "0": 287.64630126953125,
+        "1": 238
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "type": "STRING",
+          "link": 93,
+          "widget": {
+            "name": "text_a"
+          }
+        },
+        {
+          "name": "text_b",
+          "type": "STRING",
+          "link": 94,
+          "widget": {
+            "name": "text_b"
+          }
+        },
+        {
+          "name": "text_c",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "text_c"
+          }
+        },
+        {
+          "name": "text_d",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "text_d"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            106
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text Concatenate"
+      },
+      "widgets_values": [
+        " ",
+        "true",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 52,
+      "type": "VHS_LoadAudio",
+      "pos": [
+        -100,
+        350
+      ],
+      "size": {
+        "0": 410,
+        "1": 82
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "links": [
+            67,
+            91
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadAudio"
+      },
+      "widgets_values": {
+        "audio_file": "E:\\_AI\\ComfyUI\\custom_nodes\\ComfyUI-VoiceCraft\\demo\\but_the renaissance_broke_their_monopoly_on_knowledge.wav",
+        "seek_seconds": 0
+      }
+    },
+    {
+      "id": 71,
+      "type": "Apply Whisper",
+      "pos": [
+        -10,
+        510
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": 91
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            92,
+            93
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "segments_alignment",
+          "type": "whisper_alignment",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "words_alignment",
+          "type": "whisper_alignment",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Apply Whisper"
+      },
+      "widgets_values": [
+        "tiny"
+      ]
+    },
+    {
+      "id": 115,
+      "type": "Primitive string [Crystools]",
+      "pos": [
+        334,
+        186
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "string",
+          "type": "STRING",
+          "links": [
+            153
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Primitive string [Crystools]"
+      },
+      "widgets_values": [
+        "C:\\Program Files\\eSpeak NG\\libespeak-ng.dll"
+      ]
+    },
+    {
+      "id": 48,
+      "type": "voicecraft_model_loader",
+      "pos": [
+        723,
+        188
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "espeak_library_path",
+          "type": "STRING",
+          "link": 153,
+          "widget": {
+            "name": "espeak_library_path"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "voicecraft_model",
+          "type": "VCMODEL",
+          "links": [
+            179
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "voicecraft_model_loader"
+      }
+    },
+    {
+      "id": 51,
+      "type": "vhs_audio_to_audio_tensor",
+      "pos": [
+        403,
+        343
+      ],
+      "size": {
+        "0": 317.5159912109375,
+        "1": 102
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "vhs_audio",
+          "type": "VHS_AUDIO",
+          "link": 67,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio_tensor",
+          "type": "VCAUDIOTENSOR",
+          "links": [
+            180
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "audio_dur",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "vhs_audio_to_audio_tensor"
+      },
+      "widgets_values": [
+        16000,
+        1
+      ]
+    },
+    {
+      "id": 134,
+      "type": "SeargeIntegerMath",
+      "pos": [
+        1729,
+        505
+      ],
+      "size": [
+        315,
+        130
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "link": 167,
+          "widget": {
+            "name": "a"
+          }
+        },
+        {
+          "name": "b",
+          "type": "INT",
+          "link": 182,
+          "widget": {
+            "name": "b"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type": "INT",
+          "links": [
+            169
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SeargeIntegerMath"
+      },
+      "widgets_values": [
+        "a * b",
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": 129,
+      "type": "Primitive integer [Crystools]",
+      "pos": [
+        1287,
+        59
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "int",
+          "type": "INT",
+          "links": [
+            167
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Primitive integer [Crystools]"
+      },
+      "widgets_values": [
+        24
+      ]
+    },
+    {
+      "id": 127,
+      "type": "CreateTextMask",
+      "pos": [
+        1754,
+        693
+      ],
+      "size": [
+        315,
+        342
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 163,
+          "widget": {
+            "name": "text"
+          }
+        },
+        {
+          "name": "frames",
+          "type": "INT",
+          "link": 169,
+          "widget": {
+            "name": "frames"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            164
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateTextMask"
+      },
+      "widgets_values": [
+        false,
+        1,
+        0,
+        0,
+        32,
+        "white",
+        "HELLO!",
+        "fonts\\TTNorms-Black.otf",
+        512,
+        512,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 137,
+      "type": "voicecraft_process",
+      "pos": [
+        1231,
+        202
+      ],
+      "size": [
+        399.7419367734551,
+        352.05169807998163
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "voicecraft_model",
+          "type": "VCMODEL",
+          "link": 179
+        },
+        {
+          "name": "audio_tensor",
+          "type": "VCAUDIOTENSOR",
+          "link": 180
+        },
+        {
+          "name": "target_transcript",
+          "type": "STRING",
+          "link": 183,
+          "widget": {
+            "name": "target_transcript"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "vhs_audio",
+          "type": "VHS_AUDIO",
+          "links": [
+            181
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "audio_dur",
+          "type": "INT",
+          "links": [
+            182
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "gen_audio_path",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "audio_tensor",
+          "type": "VCAUDIOTENSOR",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "voicecraft_process"
+      },
+      "widgets_values": [
+        16000,
+        698476268111094,
+        "randomize",
+        0,
+        0.8,
+        1,
+        3,
+        4,
+        "But when I had approached so near to them The common To unlock the multitude of control types and artistic flows possible with AI, we want to build tooling and infrastructure to empower a community of tool-builders, who in-turn empower a world of budding artists."
+      ]
+    },
+    {
+      "id": 72,
+      "type": "ShowText|pysssss",
+      "pos": [
+        379,
+        508
+      ],
+      "size": {
+        "0": 350,
+        "1": 110
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 92,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [],
+          "shape": 6,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "But the Renaissance broke them in Opli on knowledge, one of the most important bastions of the church."
+      ]
+    },
+    {
+      "id": 88,
+      "type": "ShowText|pysssss",
+      "pos": [
+        770,
+        570
+      ],
+      "size": {
+        "0": 360,
+        "1": 160
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 106,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            163,
+            183
+          ],
+          "shape": 6,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "But the Renaissance broke them in Opli on knowledge, one of the most important bastions of the church. The quick brown fox jumps over the lazy dog"
+      ]
+    },
+    {
+      "id": 114,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        2230,
+        424
+      ],
+      "size": [
+        488.5,
+        772.5
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 164
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": 181
+        },
+        {
+          "name": "batch_manager",
+          "type": "VHS_BatchManager",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "VOICECRAFT\\test",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "test_00007-audio.mp4",
+            "subfolder": "VOICECRAFT",
+            "type": "output",
+            "format": "video/h264-mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 126,
+      "type": "whisper_transcription",
+      "pos": [
+        787,
+        801
+      ],
+      "size": {
+        "0": 330,
+        "1": 102
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio_tensor",
+          "type": "VCAUDIOTENSOR",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "transcript",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "word_end_time",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "whisper_transcription"
+      },
+      "widgets_values": [
+        "base",
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      67,
+      52,
+      0,
+      51,
+      0,
+      "VHS_AUDIO"
+    ],
+    [
+      91,
+      52,
+      0,
+      71,
+      0,
+      "VHS_AUDIO"
+    ],
+    [
+      92,
+      71,
+      0,
+      72,
+      0,
+      "STRING"
+    ],
+    [
+      93,
+      71,
+      0,
+      77,
+      0,
+      "STRING"
+    ],
+    [
+      94,
+      76,
+      0,
+      77,
+      1,
+      "STRING"
+    ],
+    [
+      106,
+      77,
+      0,
+      88,
+      0,
+      "STRING"
+    ],
+    [
+      153,
+      115,
+      0,
+      48,
+      0,
+      "STRING"
+    ],
+    [
+      163,
+      88,
+      0,
+      127,
+      0,
+      "STRING"
+    ],
+    [
+      164,
+      127,
+      0,
+      114,
+      0,
+      "IMAGE"
+    ],
+    [
+      167,
+      129,
+      0,
+      134,
+      0,
+      "INT"
+    ],
+    [
+      169,
+      134,
+      0,
+      127,
+      1,
+      "INT"
+    ],
+    [
+      179,
+      48,
+      0,
+      137,
+      0,
+      "VCMODEL"
+    ],
+    [
+      180,
+      51,
+      0,
+      137,
+      1,
+      "VCAUDIOTENSOR"
+    ],
+    [
+      181,
+      137,
+      0,
+      114,
+      1,
+      "VHS_AUDIO"
+    ],
+    [
+      182,
+      137,
+      1,
+      134,
+      1,
+      "INT"
+    ],
+    [
+      183,
+      88,
+      0,
+      137,
+      2,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
